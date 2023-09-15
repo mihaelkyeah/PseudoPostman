@@ -27,8 +27,7 @@
     methodSelect.className = methodSelect.options[methodSelect.selectedIndex].className;
     methodSelect.addEventListener('change', () => {
         methodSelect.className = methodSelect.options[methodSelect.selectedIndex].className;
-        requestObject.request_method = methodSelect.value;
-        console.log(requestObject.request_method);
+        requestObject.method = methodSelect.value;
     });
 
     baseURLField.addEventListener('keyup', () => {
@@ -171,8 +170,51 @@
 /* --------------------- AJAX/REST --------------------- */
 
     function sendRequest() {
-        console.log(requestObject);
-        alert('Lorem Input');
+
+        // Preparing data
+        
+        // console.log(requestObject);
+        
+        let headers = {
+            "accept": "Application/JSON",
+            "Content-Type": "Application/JSON",
+            "Access-Control-Allow-Origin": "*"
+        };
+        try {
+            Array.prototype.forEach.call(requestObject.request_headers, (header) => {
+                headers[header.name] = header.value;
+            });
+        } catch(e) { console.log(e) }
+
+        let bodyData = {};
+        try {
+            Array.prototype.forEach.call(requestObject.request_bodyparams, (param) => {
+                bodyData[param.name] = param.value;
+            });
+        } catch(e) { console.log(e) }
+        
+        // console.log(headers);
+        // console.log(bodyData);
+        // alert('Lorem Input');
+
+        // Preparing and running request
+
+        fetch(requestObject.baseURL+"/"+requestObject.endpoint, {
+            "method": requestObject.method,
+            "headers": JSON.stringify(headers),
+            "body": JSON.stringify(bodyData),
+            "mode": "cors"            
+        }).then(response => {
+            if (!response.ok) {
+                error_msg = (response.status < 500) ? 'Bad request' : 'Internal server error';
+                throw new Error(error_msg)
+              }
+              else
+                return response.json() 
+        }).then((json) => {
+            document.querySelector('#json_response').innerHTML = "";
+            document.querySelector('#json_response').innerHTML = json;
+        });
     }
 
 /* --------------------- (END) AJAX/REST (END) --------------------- */
