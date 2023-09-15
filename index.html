@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/utils.css">
+    <!-- CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/qtcreator-dark.min.css">
+    <!-- Page title -->
+    <title>Pseudo Postman | by Francisco Hernández</title>
+</head>
+<body>
+    <h1>Pseudo Postman</h1>
+    <h6>by Francisco Hernández</h6>
+    <p>Generic HTML client to communicate with any public API.</p>
+    <p>Copyright © 2023 All Rights and Lefts Reserved.</p>
+
+    <hr style="margin: 2em 0em" />
+
+    <div class="float-left w-45-vw">
+        <label for="base_url">Base URL</label><br/>
+        <input class="w-100-percent mb-1em" type="text" id="base-url" name="base-url"><br/>
+
+        <label for="endpoint">Endpoint</label><br/>
+        <input class="w-100-percent mb-1em" type="text" id="endpoint" name="endpoint"><br/>
+
+        <div class="w-100-percent text-center mt-1em mb-2em">
+            <label for="method">Method</label>
+            <select class="mb-2em" type="text" id="method" name="method">
+                <option value="GET" class="fw-bold color-green" selected>GET</option>
+                <option value="POST" class="fw-bold color-orangered">POST</option>
+                <option value="PUT" class="fw-bold color-magenta">PUT</option>
+                <option value="DELETE" class="fw-bold color-red">DELETE</option>
+                <option value="HEAD" class="fw-bold color-green">HEAD</option>
+                <option value="CONNECT" class="fw-bold color-cyan">CONNECT</option>
+                <option value="OPTIONS" class="fw-bold color-cyan">OPTIONS</option>
+                <option value="TRACE" class="fw-bold color-cyan">TRACE</option>
+                <option value="PATCH" class="fw-bold color-magenta">PATCH</option>
+            </select>
+        </div>
+
+        <label for="table-headers">Headers</label><br/>
+        <table id="table-headers" class="w-100-percent mb-2em">
+            <thead>
+                <th class="w-37-percent">Name</th>
+                <th class="w-37-percent">Value</th>
+                <th class="w-25-percent">Add/Remove</th>
+            </thead>
+            <tbody class="text-center">
+                <tr class="add-row">
+                    <td><input id="add-header-name" type="text" class="w-100-percent"/></td>
+                    <td><input id="add-header-value" type="text" class="w-100-percent"/></td>
+                    <td id="add-header-button">➕</td>
+                </tr>
+            </tbody>
+            <tbody class="text-center" id="request_headers">
+            </tbody>
+            <tfoot>
+                <tr><td colspan="3"><button hidden class="w-100-percent btn-clear-all" id="clearall-request_headers">Clear All</button></td></tr>
+            </tfoot>
+        </table>
+
+        <label for="table-bodyparams">Body Parameters</label><br/>
+        <table id="table-bodyparams" class="w-100-percent">
+            <thead>
+                <th class="w-37-percent">Name</th>
+                <th class="w-37-percent">Value</th>
+                <th class="w-25-percent">Add/Remove</th>
+            </thead>
+            <tbody class="text-center">
+                <tr class="add-row">
+                    <td><input id="add-bodyparam-name" type="text" class="w-100-percent"/></td>
+                    <td><input id="add-bodyparam-value" type="text" class="w-100-percent"/></td>
+                    <td id="add-bodyparam-button">➕</td>
+                </tr>
+            </tbody>
+            <tbody class="text-center" id="request_bodyparams">
+            </tbody>
+            <tfoot id="request_bodyparams-tfoot">
+                <tr><td colspan="3"><button hidden class="w-100-percent btn-clear-all" id="clearall-request_bodyparams">Clear All</button></td></tr>
+            </tfoot>
+        </table>
+
+        <button class="mt-3em w-100-percent p-1em" id="send-request-button">Send Request</button>
+    </div>
+
+    <div class="float-right w-45-vw">
+        <label for="json_response">JSON Response</label>
+        <pre><code class="language-JSON" id="json_response">{
+    success: "true",
+    data: "Lorem Input"
+}
+</code></pre>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

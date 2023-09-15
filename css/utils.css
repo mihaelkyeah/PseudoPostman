@@ -1,0 +1,159 @@
+/**
+* === === === === === COLORS === === === === ===
+*/
+
+.color-red { color: #c11; }
+.color-green { color: #1c1; }
+.color-blue { color: #11c; }
+.color-magenta { color: #c1c; }
+.color-yellow { color: #fd1; }
+.color-cyan { color: #1cc; }
+.color-lightblue { color: lightblue; }
+.color-orange { color: orange; }
+.color-orangered { color: orangered; }
+.color-gray { color: #777 }
+
+/**
+* === === === === === TEXT ALIGNMENT === === === === ===
+*/
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify }
+.text-start { text-align: start }
+.text-end { text-align: end }
+
+/**
+* === === === === === FONT WEIGHTS === === === === ===
+*/
+.fw-lighter { font-weight: lighter }
+.fw-light { font-weight: light }
+.fw-semibold { font-weight: 600 }
+.fw-bold { font-weight: bold }
+.fw-bolder { font-weight: bolder }
+
+/**
+* === === === === === FLOATS === === === === ===
+*/
+
+.float-left { float: left; }
+.float-right { float: right; }
+
+/**
+* === === === === === MARGINS === === === === ===
+*/
+
+.m-1em { margin: 1em; }
+.m-2em { margin: 2em; }
+.m-3em { margin: 3em; }
+.m-4em { margin: 4em; }
+.m-5em { margin: 5em; }
+
+.mb-1em { margin-bottom: 1em; }
+.mb-2em { margin-bottom: 2em; }
+.mb-3em { margin-bottom: 3em; }
+.mb-4em { margin-bottom: 4em; }
+.mb-5em { margin-bottom: 5em; }
+
+.mt-1em { margin-top: 1em; }
+.mt-2em { margin-top: 2em; }
+.mt-3em { margin-top: 3em; }
+.mt-4em { margin-top: 4em; }
+.mt-5em { margin-top: 5em; }
+
+.ml-1em { margin-left: 1em; }
+.ml-2em { margin-left: 2em; }
+.ml-3em { margin-left: 3em; }
+.ml-4em { margin-left: 4em; }
+.ml-5em { margin-left: 5em; }
+
+.mr-1em { margin-right: 1em; }
+.mr-2em { margin-right: 2em; }
+.mr-3em { margin-right: 3em; }
+.mr-4em { margin-right: 4em; }
+.mr-5em { margin-right: 5em; }
+
+.my-1em { margin-top: 1em; margin-bottom: 1em; }
+.my-2em { margin-top: 2em; margin-bottom: 2em; }
+.my-3em { margin-top: 3em; margin-bottom: 3em; }
+.my-4em { margin-top: 4em; margin-bottom: 4em; }
+.my-5em { margin-top: 5em; margin-bottom: 5em; }
+
+.mx-1em { margin-left: 1em; margin-right: 1em; }
+.mx-2em { margin-left: 2em; margin-right: 2em; }
+.mx-3em { margin-left: 3em; margin-right: 3em; }
+.mx-4em { margin-left: 4em; margin-right: 4em; }
+.mx-5em { margin-left: 5em; margin-right: 5em; }
+
+/**
+* === === === === === PADDINGS === === === === ===
+*/
+
+.p-1em { padding: 1em; }
+.p-2em { padding: 2em; }
+.p-3em { padding: 3em; }
+.p-4em { padding: 4em; }
+.p-5em { padding: 5em; }
+
+.pb-1em { padding-bottom: 1em; }
+.pb-2em { padding-bottom: 2em; }
+.pb-3em { padding-bottom: 3em; }
+.pb-4em { padding-bottom: 4em; }
+.pb-5em { padding-bottom: 5em; }
+
+.pt-1em { padding-top: 1em; }
+.pt-2em { padding-top: 2em; }
+.pt-3em { padding-top: 3em; }
+.pt-4em { padding-top: 4em; }
+.pt-5em { padding-top: 5em; }
+
+.pl-1em { padding-left: 1em; }
+.pl-2em { padding-left: 2em; }
+.pl-3em { padding-left: 3em; }
+.pl-4em { padding-left: 4em; }
+.pl-5em { padding-left: 5em; }
+
+.pr-1em { padding-right: 1em; }
+.pr-2em { padding-right: 2em; }
+.pr-3em { padding-right: 3em; }
+.pr-4em { padding-right: 4em; }
+.pr-5em { padding-right: 5em; }
+
+.py-1em { padding-top: 1em; margin-bottom: 1em; }
+.py-2em { padding-top: 2em; padding-bottom: 2em; }
+.py-3em { padding-top: 3em; padding-bottom: 3em; }
+.py-4em { padding-top: 4em; padding-bottom: 4em; }
+.py-5em { padding-top: 5em; padding-bottom: 5em; }
+
+.px-1em { padding-left: 1em; padding-right: 1em; }
+.px-2em { padding-left: 2em; padding-right: 2em; }
+.px-3em { padding-left: 3em; padding-right: 3em; }
+.px-4em { padding-left: 4em; padding-right: 4em; }
+.px-5em { padding-left: 5em; padding-right: 5em; }
+
+/**
+* === === === === === DIMENSIONS === === === === ===
+*/
+
+.w-12-percent { width: 12%; }
+.w-25-percent { width: 25%; }
+.w-37-percent { width: 37%; }
+.w-50-percent { width: 50%; }
+.w-75-percent { width: 75%; }
+.w-100-percent { width: 100%; }
+.w-25-vw { width: 25vw; }
+.w-45-vw { width: 45vw; }
+.w-50-vw { width: 50vw; }
+.w-75-vw { width: 75vw; }
+.w-100-vw { width: 100vw; }
+
+.h-12-percent { height: 12%; }
+.h-25-percent { height: 25%; }
+.h-50-percent { height: 50%; }
+.h-75-percent { height: 75%; }
+.h-100-percent { height: 100%; }
+.h-25-vh { height: 25vh; }
+.h-50-vh { height: 50vh; }
+.h-75-vh { height: 75vh; }
+.h-100-vh { height: 100vh; }
